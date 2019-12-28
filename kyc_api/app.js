@@ -3,6 +3,7 @@ const compression = require("compression");
 const express = require("express");
 const helmet = require("helmet");
 const cookieParser = require("cookie-parser");
+const cors = require("./middlewares/cors");
 const morgan = require("morgan");
 
 const app = express();
@@ -13,7 +14,8 @@ app
   .use(morgan("dev"))
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
-  .use(cookieParser());
+  .use(cookieParser())
+  .use(cors);
 
 app.use((req, res, next) => {
   return res.status(404).json({ err: "Route Not Found", msg: "" });
