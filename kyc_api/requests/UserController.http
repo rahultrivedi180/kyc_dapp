@@ -1,7 +1,7 @@
 @url = http://localhost:3000/api
 
 ### add kyc doc
-POST {{url}}/user/kyc HTTP/.1
+POST {{url}}/user/addkyc HTTP/.1
 Content-Type: application/json
 
 {
@@ -15,4 +15,21 @@ Content-Type: application/json
   "idType": "Adharcard",
   "idNumber": "123456789",
   "kycId": "1"
+}
+
+### get kyc doc
+POST {{url}}/user/getkyc HTTP/1.1
+Content-Type: application/json
+
+{
+  "name":"d17d0ce31356b9069c94651d305295e6:bc1cf6852cdfe5cf1c45564b78e246e0",
+  "bdate":"42203506ec89546d354afdce195185d1:a65949195033df75a13b3b0a93a54070",
+  "email":"3e8cc43119d4992edf3728e3eb31538c:ef59c877ae825ef0246f3af41914893407b99226c590a1f219523f52851525b9",
+  "address":"f96b7ea891b890700e6dfd26e1ad8e6a:adc22fd29517864a2739368e85f29529c200b6643ad9861a01be91a1b9607eb9b6822fad3a99347ad04bfe1135b9bd1d",
+  "country":"d1c03695ff43fa05bf35b5be752d3a08:8e1d1d55932605ae2622af5a22881497",
+  "pin":"1ca891d537c63145884835ff781c1b81:ec93d92455e53c0f65d5eeb15c0865d5",
+  "mobile":"0e863f93c9eb334aa6830e4fffe56cbd:51785370172337db51964c42f0610168",
+  "idType":"581038236c31380a0f1b083809b6ed93:139118c0a274990302fd25d176e56b82",
+  "idNumber":"640edf7841e9454434d51e46dc712f85:9b7258129571d74c8e92171f0ca9e47f",
+  "kycId":"24ff2a9bc031ca262235be6badbabb67:e74a1799027e0a05afb7f105f4ec29d4"
 }

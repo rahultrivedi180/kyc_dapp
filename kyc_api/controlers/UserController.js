@@ -1,6 +1,7 @@
 const { encrypt } = require("../helpers/encryptor");
+const { decrypt } = require("../helpers/decryptor");
 
-exports.addKyc = async (req, res) => {
+exports.addKycData = async (req, res) => {
   try {
     const { name, bdate, email, address, country, pin, mobile, idType, idNumber, kycId } = req.body;
 
@@ -28,6 +29,39 @@ exports.addKyc = async (req, res) => {
       kycId: encKycId
     };
     return res.status(200).json({ msg: "Encryption successfull", data });
+  } catch (err) {
+    return res.status(500).json({ err: err, msg: "Something Went Wrong" });
+  }
+};
+
+exports.getKycData = async (req, res) => {
+  try {
+    const { name, bdate, email, address, country, pin, mobile, idType, idNumber, kycId } = req.body;
+
+    const decName = await decrypt(name);
+    const decBdate = await decrypt(bdate);
+    const decEmail = await decrypt(email);
+    const decAddress = await decrypt(address);
+    const decCountry = await decrypt(country);
+    const decPin = await decrypt(pin);
+    const decMobile = await decrypt(mobile);
+    const decIdType = await decrypt(idType);
+    const decIdNumber = await decrypt(idNumber);
+    const decKycId = await decrypt(kycId);
+
+    const data = {
+      name: decName,
+      bdate: decBdate,
+      email: decEmail,
+      address: decAddress,
+      country: decCountry,
+      pin: decPin,
+      mobile: decMobile,
+      idType: decIdType,
+      idNumber: decIdNumber,
+      kycId: decKycId
+    };
+    return res.status(200).json({ msg: "Decryption successfull", data });
   } catch (err) {
     return res.status(500).json({ err: err, msg: "Something Went Wrong" });
   }
