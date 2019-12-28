@@ -1,6 +1,6 @@
 const cors = require("cors");
 
-const whitelist = ["http://localhost", "http:127.0.0.1:3000"];
+const whitelist = ["http://localhost", "http://127.0.0.1:3000", "http://192.168.43.89:8080"];
 
 const origin = (origin, callback) => {
   if (whitelist.indexOf(origin) !== -1 || !origin) {
