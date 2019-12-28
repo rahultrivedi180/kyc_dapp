@@ -1,0 +1,18 @@
+@url = http://localhost:3000/api
+
+### add kyc doc
+POST {{url}}/user/kyc HTTP/.1
+Content-Type: application/json
+
+{
+  "name": "Rahul Trivedi",
+  "bdate": "20/01/1998",
+  "email": "rahultrivedi180@gmail.com",
+  "address": "Daxini Society, Maninagar, Ahmedabad, Gujarat",
+  "country": "India",
+  "pin": "380008",
+  "mobile": "+919825420198",
+  "idType": "Adharcard",
+  "idNumber": "123456789",
+  "kycId": "1"
+}

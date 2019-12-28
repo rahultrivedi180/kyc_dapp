@@ -8,6 +8,8 @@ const morgan = require("morgan");
 
 const app = express();
 
+const UserRoutes = require("./routes/UserRoutes");
+
 app
   .use(helmet())
   .use(compression())
@@ -16,6 +18,8 @@ app
   .use(express.urlencoded({ extended: true }))
   .use(cookieParser())
   .use(cors);
+
+app.use("/api/user", UserRoutes);
 
 app.use((req, res, next) => {
   return res.status(404).json({ err: "Route Not Found", msg: "" });
