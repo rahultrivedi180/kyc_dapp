@@ -88,6 +88,9 @@ export default {
       encryptedData: null
     }
   },
+  async created() {
+    console.log(await window.web3.eth.getAccounts())
+  },
   methods: {
     async encKyc(e) {
       e.preventDefault();

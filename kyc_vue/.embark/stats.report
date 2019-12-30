@@ -1,0 +1,51 @@
+Hash: 199878cd95abd334b8a1
+Version: webpack 4.39.2
+Time: 460ms
+Built at: 12/28/2019 10:00:54 PM
+        Asset      Size     Chunks             Chunk Names
+    js/app.js   4.3 KiB  js/app.js  [emitted]  js/app.js
+js/app.js.map  4.03 KiB  js/app.js  [emitted]  js/app.js
+Entrypoint js/app.js = js/app.js js/app.js.map
+chunk {js/app.js} js/app.js, js/app.js.map (js/app.js) 28 bytes [entry] [rendered]
+    > js/app.js
+ [0] multi ./app/js/index.js 28 bytes {js/app.js} [depth 0] [built]
+     multi entry 
+     factory:2ms building:10ms = 12ms
+
+LOG from webpack.buildChunkGraph.visitModules
+<t> prepare: 0.896034ms
+<t> visiting: 0.195869ms
+
+ERROR in multi ./app/js/index.js
+Module not found: Error: Can't resolve './app/js/index.js' in '/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue'
+resolve './app/js/index.js' in '/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue'
+  using description file: /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/package.json (relative path: .)
+    Field 'browser' doesn't contain a valid alias configuration
+    using description file: /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/package.json (relative path: ./app/js/index.js)
+      no extension
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js doesn't exist
+      .wasm
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.wasm doesn't exist
+      .mjs
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.mjs doesn't exist
+      .js
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.js doesn't exist
+      .json
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.json doesn't exist
+      .jsx
+        Field 'browser' doesn't contain a valid alias configuration
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.jsx doesn't exist
+      as directory
+        /home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js doesn't exist
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js]
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.wasm]
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.mjs]
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.js]
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.json]
+[/home/rahultrivedi/MyPlace/Git/projects/kyc_dapp/kyc_vue/app/js/index.js.jsx]
+ @ multi ./app/js/index.js js/app.js[0]

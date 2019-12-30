@@ -32,8 +32,8 @@ module.exports = {
     // order of connections the dapp should connect to
     dappConnection: [
       "$WEB3",  // uses pre existing web3 object if available (e.g in Mist)
-      "ws://localhost:8546",
-      "http://localhost:8545"
+      // "ws://localhost:8546",
+      // "http://localhost:8545"
     ],
 
     // Automatically call `ethereum.enable` if true.
@@ -68,8 +68,8 @@ module.exports = {
   // assumed to be the intended environment by `embark run`
   development: {
     dappConnection: [
-      "ws://localhost:8546",
-      "http://localhost:8545",
+      // "ws://localhost:8546",
+      // "http://localhost:8545",
       "$WEB3"  // uses pre existing web3 object if available (e.g in Mist)
     ]
   },
@@ -88,6 +88,20 @@ module.exports = {
   // used with "embark run livenet"
   livenet: {
   },
+
+  infura: {
+    deployment: {
+      accounts: [
+        {
+          mnemonic: 'possible fetch pumpkin fat grit dish chef under moral sing aerobic state',
+        }
+      ],
+      host: 'goerli.infura.io/v3/06a5d40111fe41f6a983cf17f5874505',
+      port: false,
+      protocol: 'https',
+      type: 'rpc'
+    }
+  }
 
   // you can name an environment with specific settings and then specify with
   // "embark run custom_name" or "embark blockchain custom_name"
